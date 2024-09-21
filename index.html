@@ -60,6 +60,7 @@
                 </div>
                 <div class="border-b-2 border-dashed my-4"></div>
                 <section class="grid grid-cols-12 gap-y-5 font-Inter">
+                    <!-- seat plan section start -->
                     <!-- front driver seat -->
                     <p class="col-span-1"></p>
                     <div class="col-span-11">
@@ -162,13 +163,51 @@
                     </div>
                 </section>
             </div>
-            <div class="bg-pink-500 col-span-1">input section</div>
-            <!-- seat couch section start -->
+            <div class="col-span-1">
+                <div>
+                    <h2 class="text-2xl font-semibold">Select Your Seat</h2>
+                </div>
+                <div class="border-b-2 border-dashed my-4"></div>
+                <section class="font-Inter">
+                    <div class="bg-[#F7F8F8] p-5 rounded-xl">
+                        <h3 class="flex justify-between font-semibold">
+                            <p class="flex">
+                                <span>Seat</span>
+                                <span class="bg-primary text-white font-normal w-4 h-4 p-2 rounded-full text-sm flex justify-center items-center">0</span></p>
+                            <p>Class</p>
+                            <p>Price</p>
+                        </h3>
+                        <div class="border-b-2 border-dashed my-4"></div>
+                        <ul class="space-y-5">
+                            <h3 class="text-error font-semibold text-center capitalize text-2xl">No Seat Booked</h3>
+                        </ul>
+                        <div class="divider"></div>
+                        <div class="text-normal font-semibold flex justify-between">
+                            <p>Total Price</p>
+                            <p>
+                                <span>BDT:</span>
+                                <span>****</span>
+                            </p>
+                        </div>
+                        <div class="border-b-2 border-dashed my-4"></div>
+                        <div class="flex items-center justify-between gap-2 border-y-2 py-2 my-2 border-dashed text-lg font-semibold">
+                            <input type="text" disabled class="input input-primary border-primary my-5 w-full" placeholder="have any coupon?">
+                            <button disabled class="btn bg-primary text-white">Apply</button>
+                        </div>
+                        <div class="text-normal font-semibold flex justify-between">
+                            <p>Grand Price</p>
+                            <p>
+                                <span>BDT:</span>
+                                <span>****</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
             
         </section>
     </main>
-
-
 
     <script src="app.js"></script>
 </body>
