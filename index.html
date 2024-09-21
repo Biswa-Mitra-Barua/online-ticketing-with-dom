@@ -240,8 +240,8 @@
                             </p>
                         </div>
                         <!-- <div class="border-b-2 border-dashed my-4"></div> -->
-                        <div
-                            class="flex items-center justify-between gap-2 border-y-2 py-2 my-2 border-dashed text-lg font-semibold">
+                        <div id="show-coupon-price"
+                            class="flex items-center justify-between gap-2 border-y-2 py-2 my-2 border-dashed font-semibold">
                             <input id="input-coupon-field" type="text" disabled class="input input-primary border-primary my-5 w-full"
                                 placeholder="have any coupon?">
                             <button id="coupon-btn" disabled class="btn bg-primary text-white">Apply</button>
@@ -270,7 +270,7 @@
                                 <label class="label">
                                     <span class="label-text font-semibold">Phone Number*</span>
                                 </label>
-                                <input type="text" placeholder="Enter your phone number" class="input input-bordered"
+                                <input id="phone-number" type="text" placeholder="Enter your phone number" class="input input-bordered"
                                     required />
                             </div>
                             <div class="form-control">
@@ -281,7 +281,7 @@
                                     required />
                             </div>
                             <div class="form-control my-6">
-                                <button onclick="my_modal_1.showModal()"
+                                <button id="next-btn" disabled onclick="my_modal_1.showModal()"
                                     class="btn bg-primary text-white text-lg">Next</button>
                                 <!-- Open the modal using ID.showModal() method -->
                                 <dialog id="my_modal_1" class="modal">
@@ -296,7 +296,7 @@
                                         <div class="modal-action flex justify-center items-center">
                                             <form method="dialog">
                                                 <!-- if there is a button in form, it will close the modal -->
-                                                <button class="btn bg-primary text-white px-8">Continue</button>
+                                                <button id="continue-btn" class="btn bg-primary text-white px-8">Continue</button>
                                             </form>
                                         </div>
                                     </div>
@@ -312,7 +312,6 @@
                     </div>
                 </div>
             </div>
-
 
         </section>
     </main>
