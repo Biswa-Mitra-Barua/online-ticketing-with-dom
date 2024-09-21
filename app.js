@@ -4,6 +4,8 @@ const availableSeatEl = document.getElementById('available-seat');
 const totalPriceEl = document.getElementById('total-price');
 const inputCouponEl = document.getElementById('input-coupon-field');
 const couponBtn = document.getElementById('coupon-btn');
+const defaultNoSeatTextEl = document.getElementById('default-no-seat-text');
+const grandTotalEl = document.getElementById('grand-total');
 
 let selectedSeat = [];
 let totalPrice = 0;
@@ -24,6 +26,9 @@ function handleSeatElement(event) {
         const newAvailableSeatValue = availableSeatValue - 1;
         availableSeatEl.innerText = newAvailableSeatValue;
 
+        // remove No Seat Booked Text
+        defaultNoSeatTextEl.classList.add('hidden');
+
 
         selectedSeatEl.innerHTML += `<li class="text-base font-normal flex justify-between">
         <span>${event.innerText}</span>
@@ -41,7 +46,28 @@ function handleSeatElement(event) {
             couponBtn.removeAttribute('disabled');
         }
     }else{
-        return alert('Maximum seat booked')
+        return alert('Maximum seat booked');
     }
 
 }
+
+// coupon button function
+document.getElementById('coupon-btn').addEventListener('click',function(){
+    const couponInputValue = inputCouponEl.value;
+    let couponSave = 0;
+
+    if (couponInputValue !== 'NEW50' && couponInputValue !== 'Coupon 20'){
+        return alert('Your provided coupon is invalid');
+    }
+
+    if (couponInputValue === 'NEW50'){
+        couponSave = totalPrice * 0.15;
+    }
+    else if(couponInputValue === 'Coupon 20'){
+        couponSave = totalPrice * 0.20;
+    }
+    
+    const grandTotalValue = totalPrice - couponSave;
+    grandTotalEl.innerText = grandTotalValue.toFixed(2);
+    
+})
